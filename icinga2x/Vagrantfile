@@ -61,6 +61,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         override.vm.box = "centos-71-x64-vbox"
         override.vm.box_url = "http://boxes.icinga.org/centos-71-x64-vbox.box"
 
+        v.name = "icinga2"
         v.customize ["modifyvm", :id, "--memory", "2048"]
         v.customize ["modifyvm", :id, "--cpus", "2"]
         # Using the host's resolver as a DNS proxy in NAT mode
